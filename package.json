@@ -1,0 +1,17 @@
+{
+  "name": "kafkaffboss",
+  "version": "1.0.0",
+  "description": "kafka project",
+  "keywords": [
+    "kafka",
+    "docker",
+    "node"
+  ],
+  "license": "ISC",
+  "author": "Jackfr0stt",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
