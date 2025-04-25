@@ -1,0 +1,26 @@
+services:
+  server:
+    build:
+      context: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:8080
+
+  zookeeper:
+    image: bitnami/zookeeper:latest
+    ports:
+      - 4000:2181
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+
+  kafka:
+    image: bitnami/kafka:latest
+    ports:
+      - 5000:9092
+    environment:
+      - ZOOKEEPER_CONNECT=zookeeper:2181
+
+networks:
+  default:
+    name: kafka-net
